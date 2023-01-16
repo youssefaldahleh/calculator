@@ -11,7 +11,7 @@ const calculator = {
     display : '0',
     number1 :null,
     number2 : false,
-    operator : null
+    operator : null,
 }
 function clearCalc(){
     calculator.display = '0'
@@ -26,7 +26,11 @@ function updateDisplay(){
 updateDisplay()
 
 function inputNumber(num){
-    let {display,number2} = calculator
+    let {display,number2} = calculator;
+    // let display = calculator.display;
+    // let number2 = calculator.number2;
+    
+
     if (number2 === true) {
         calculator.display = num
         calculator.number2 = false
@@ -99,20 +103,5 @@ if (e.target.classList.contains('all-clear')) {
 
 })
 
-
-// btn.map(e => {
-// e.addEventListener('click',(e)=>{
-//     switch (e.target.innerText) {    
-//     case 'AC':
-//         screen.innerText =""
-//         break;
-//     case '=':
-//         screen.innerText = eval(screen.innerText)  ;
-//         break  ;
-//         default:
-//             screen.innerText += e.target.innerText;
-//          };
-//         });
-//         });
 
 
